@@ -1,0 +1,615 @@
+<!doctype html>
+<html>
+	
+	<head>
+		
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Active learning across cultures</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  
+        
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/zenburn.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+  
+        <script src="./driver.js"></script>
+	</head>
+	<body>
+        
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="visuals/active_learning.png" data-background-opacity = 1.0 data-background-size="150%" data-transition="fade">
+					<img data-src="visuals/uio_logo2_white.svg" height = '80px' align = 'right'>
+					<img data-src="visuals/hylleraas-–-logo-–-white-– screen-–-rgb.png" height = '60px' align = 'right'>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<h2> <font color="#c5ad73">The rise of</font> <font color="#c5ad73">  </font> </h2 align = "bottom">
+					<p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p></p>
+                    <h3><font color="#c5ad73">approaches</font> <font color="#BBBBBB">across cultures</font></h3 align = "bottom">
+                    <small>
+                        <span style="background-color: #c5ad73">&nbsp;Audun Skau Hansen&nbsp;</span>
+				    </small>
+					<p>&nbsp;</p>
+                    <p></p>
+				</section>
+
+				<section data-background-color= "#181a18">
+					<h1><font color="#ffffcc"><i class="fas fa-exclamation"></i></font></h1>
+					<font color="#ffffcc"> Disclaimer</font>
+				</section>
+
+				
+
+
+
+                <section data-background="#151e1d" style ="text-align:left; color:#f4dca5">
+					Is there a need to change higher education?
+					<hr>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Experimentation drives developement </p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> New technologies </p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> New student groups</p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Needs of society are changing </p>
+				</section>
+
+				<section data-background-image="visuals/graded_background_1176.png" style ="text-align:left; color:#f4dca5">
+				    <p> Educational systems at a glance (~2020) </p>
+					<small>
+						<table>
+							<tr>
+								<th style="font-size:  smaller">
+								    <p>Statistic</p>
+							    </th>
+							    <th style="font-size:  smaller">
+								    <p>Norway</p>
+							    </th>
+								<th style="font-size:  smaller">
+								    &nbsp;
+							    </th>
+								<th style="font-size:  smaller;">
+								    <p>Japan</p>
+							    </th>
+						    </tr>
+
+
+							<tr>
+								<th style="font-size:  smaller">
+								    <p> Years of compulsory education </p>
+									<p> Average years of schooling for adults</p>
+									<p> Spending per student (in USD)</p>
+									<p> The share of 25-34 year-olds with tertiary attainment </p>
+							    </th>
+								<th style="font-size:  smaller">
+								    <p> 10 <a href="">[*]</a></p>
+									<p> 11.8 <a href="https://www.nationmaster.com/country-info/stats/Education/Average-years-of-schooling-of-adults">[*]</a></p>
+									<p>17 757 <a href="https://gpseducation.oecd.org/Content/EAGCountryNotes/EAG2022_Norway.pdf">[OECD, 2019]</a></p>
+							        <p> 55 %<a href="https://gpseducation.oecd.org/Content/EAGCountryNotes/EAG2022_Norway.pdf">[OECD, 2021]</a></p>
+								</th>
+								<th style="font-size:  smaller">
+								    &nbsp;
+							    </th>
+								<th style="font-size:  smaller;">
+								    <p> 9 <a href="https://www.us.emb-japan.go.jp/itpr_en/education-system-in-japan.html">[*]</a></p>
+									<p> 9.8 <a href="https://www.nationmaster.com/country-info/stats/Education/Average-years-of-schooling-of-adults">[*]</a> </p>
+									<p> 12 474 <a href="https://gpseducation.oecd.org/Content/EAGCountryNotes/EAG2022_Japan.pdf">[OECD, 2022]</a></p>
+									<p> 65 % <a href="https://gpseducation.oecd.org/Content/EAGCountryNotes/EAG2022_Japan.pdf">[OECD, 2021]</a></p>									
+							    </th>
+						    </tr>
+					    </table>
+						</small>
+				</section>
+
+				<section data-background="#ffffff" style ="text-align:left;">
+					<iframe src="https://data.oecd.org/chart/6YXr" width="860" height="645" style="border: 0" mozallowfullscreen="true" webkitallowfullscreen="true" allowfullscreen="true"><a href="https://data.oecd.org/chart/6YXr" target="_blank">OECD Chart: Adult education level, Tertiary, % of 25-64 year-olds, Annual, 1981 – 2021</a></iframe>
+				</section>
+
+				<section data-background="#FFFFFF" style ="text-align:left;">
+                    <iframe width="100%" height="620" frameBorder="0" src="https://www.compareyourcountry.org/snaps/education-at-a-glance-2022/en/4575/2020"></iframe>
+                </section>
+
+				<section data-background-color= "#181a18">
+					<h1><font color="#ffffcc"><i class="far fa-question-circle"></i></font></h1>
+					<font color="#ffffcc"> Is "passive learning" even possible? </font>
+				</section>
+
+				<section data-background-color= "#181a18">
+					<font color="#ffffcc"> Active learning: </font>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Students do more than just listen</p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Emphasis on developing student skills</p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Higher order thinking </p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Engagement in activities</p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Reflection on own learning</p>
+					<p></p>
+					<small><font color="#ffffcc">Bonwell, C. C., & Eison, J. A. (1991). Active learning: Creating excitement in the classroom. 1991 ASHE-ERIC higher education reports. ERIC Clearinghouse on Higher Education, The George Washington University, One Dupont Circle, Suite 630, Washington, DC 20036-1183.</font></small>
+				</section>
+
+				<section data-background-color= "#181a18">
+					<font color="#ffffcc"> "The lecture of the future is remote-controlled" <a href="https://www.universitas.no/undervisning/fremtidens-forelesning-er-fjernstyrt/248162">(Universitas, 2010)</a> </font>
+					<img src="https://image.universitas.no/248326.webp?imageId=248326&width=706&height=398&format=webp" max-height="80%">
+					<p></p>
+					<small><font color="#ffffcc">Crouch, C. H., & Mazur, E. (2001). Peer instruction: Ten years of experience and results. American journal of physics, 69(9), 970-977.</font></small>
+				</section>
+
+				
+
+				<section data-background-image="visuals/graded_background_1176.png" style ="text-align:left; color:#f1d38d">
+				    <p> Policy in Norway <a href="https://www.regjeringen.no/no/dokumenter/stmeld-nr-27-2000-2001-/id194247/?q=aktiv&ch=2#kap5-3-4" style="font-size: smaller;">St.meld. nr. 27 (2000-2001)</a>   </p>
+					<small>
+                       <blockquote style="color:#fcf2d9">
+						"In order to enhance the learning outcome and progression, student active teaching methods should be emphasised in combination 
+						with assessments, promoting learning through recurring feedback.
+					   </blockquote>
+					   <blockquote style="color:#f1d38d">
+						<smaller>
+						"For å styrke læringsutbyttet og progresjonen skal det legges vekt på studentaktive undervisningsformer i kombinasjon med evalueringer som fremmer læring gjennom jevnlige tilbakemeldinger. "
+					    </smaller>   
+					</blockquote>
+                    </small>
+				</section>
+
+				<section data-background-image="visuals/graded_background_1176.png" style ="text-align:left; color:#f1d38d">
+				    <p> Policy in Norway <a href="https://www.regjeringen.no/no/dokumenter/meld.-st.-16-20162017" style="font-size: smaller;">St.meld. nr. 16 (2016-2017)</a>   </p>
+					<small>
+                       <blockquote style="color:#fcf2d9">
+						"All students shall receive active and varied learning- and assesment approaches, where digital opportunities are utilized."
+					   </blockquote>
+					   <blockquote style="color:#f1d38d">
+						<smaller>
+						"Alle studenter skal møte aktiviserende og varierte lærings- og vurderingsformer, der digitale muligheter utnyttes."
+					    </smaller>   
+					</blockquote>
+                    </small>
+				</section>
+
+
+				<section data-background-image="visuals/graded_background_1176.png" style ="text-align:left; color:#f1d38d">
+				    <p> Policy in Japan <a href="https://www.mext.go.jp/en/publication/report/title01/detail01/__icsFiles/afieldfile/2016/12/06/1380275_001.pdf" style="font-size: smaller;">MEXT: "Towards a Qualitative Transformation of University Education for Building a New
+						Future" (2012)</a>   </p>
+                       <blockquote style="color:#fcf2d9">
+						"The cultivation of
+						'gakushiryoku' requires active learning through discussions and debates, and
+						experiential education programs through internships"
+					   </blockquote>
+				</section>
+
+				<section data-background-color= "#181a18" style ="text-align:left; color:#f1d38d">
+				    <p> A swift transition in Japan, according to MEXT[*]:  </p>
+                       <blockquote style="color:#fcf2d9">
+						"(...) 41.6% of four-year universities and colleges provide the faculty development workshops for promoting active learning methods in a class as compared with that of 26.9% in 2013.""
+					   </blockquote>
+					   <small><font color="#ffffcc">[*]Yamada, A., & Yamada, R. (2018). The new movement of active learning in Japanese higher education: the analysis of active learning case in Japanese graduate programs. Active Learning-Beyond the Future, 1(4), 1-16.</font></small>
+				</section>
+
+				
+
+				
+				<section data-background-color= "#181a18">
+					<h3><font color="#ffffcc">  Promises of active learning: </font></h3>
+					<hr>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Engage a broad group of students</p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Enhance learning outcomes 
+						<small><font color="#ffffcc">Freeman, S., Eddy, S. L., McDonough, M., Smith, M. K., Okoroafor, N., Jordt, H., & Wenderoth, M. P. (2014). Active learning increases student performance in science, engineering, and mathematics. Proceedings of the national academy of sciences, 111(23), 8410-8415.</font></small>
+					</p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Not necessarily a "silver bullet" 
+					 <small><font color="#ffffcc"> Matsushita, K. (2018). An invitation to deep active learning. Deep active learning: Toward greater depth in university education, 15-33.</font></small> </p>
+					<p></p>
+				</section>
+
+				<section data-background-color= "#181a18">
+					<p>Prof. Kayo Matsushita</p>
+					<h2><p><p class="fragment"> deep </p><font color="#ffffcc"> active learning </font> </p></h2>
+					<p class="fragment"> engagement and understanding</p>
+					<small><font color="#ffffcc"> Matsushita, K. (2018). An invitation to deep active learning. Deep active learning: Toward greater depth in university education, 15-33.</font></small> </p>
+				</section>
+
+				
+
+				
+				
+
+				<section data-background-color= "#181a18">
+					<font color="#ffffcc"> Active learning is realized in how teaching is organized, for instance   </font>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Peer-instruction ("clickers")</p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Think-pair-share </p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> One minute paper </p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Problem solving in groups</p>
+					<p class="fragment"><i class="fas fa-kiwi-bird"></i> Case studies </p>
+					<p></p>
+					</section>
+
+
+					
+					<section data-background-color= "#181a18" style ="text-align:left; color:#f1d38d">
+						<p> Implementation in Japan: </p>
+						   <blockquote style="color:#fcf2d9">
+							"AL often entails the application of problem-based learning, cooperative learning, and other types of class activities, as recommended by the Central Council of Education in its 2012 report"
+						   </blockquote>
+						   <small><font color="#ffffcc">[*]Ito, H., & Takeuchi, S. (2022). The demise of active learning even before its implementation? Instructors’ understandings and application of this approach within Japanese higher education. Education Inquiry, 13(2), 185-204.</font></small>
+					</section>
+
+					<section data-background-color= "#181a18" style ="text-align:left; color:#f1d38d">
+						<small>
+					<table class="table table-bordered table-hover table-condensed">
+						<thead><tr><th title="Field #1">How do you use active learning?</th>
+						<th title="Field #2">n</th>
+						<th title="Field #3">%</th>
+						</tr></thead>
+						<tbody><tr>
+						<td>1. Problem-based/Project based learning (PBL)</td>
+						<td align="right">19</td>
+						<td align="right">9.3</td>
+						</tr>
+						<tr>
+						<td>2. Cooperative/Collaborative learning (CL)</td>
+						<td align="right">21</td>
+						<td align="right">10.3</td>
+						</tr>
+						<tr>
+						<td>3. Other class activities (e.g. Presentations)</td>
+						<td align="right">22</td>
+						<td align="right">10.8</td>
+						</tr>
+						<tr>
+						<td>4. Uncertain</td>
+						<td align="right">6</td>
+						<td align="right">2.9</td>
+						</tr>
+						<tr>
+						<td>5. Others</td>
+						<td align="right">39</td>
+						<td align="right">19.1</td>
+						</tr>
+						<tr>
+						<td>6. PBL, CL, and other class activities</td>
+						<td align="right">35</td>
+						<td align="right">17.2</td>
+						</tr>
+						<tr>
+						<td>7. PBL and other class activities</td>
+						<td align="right">21</td>
+						<td align="right">10.3</td>
+						</tr>
+						<tr>
+						<td>8. PBL and CL</td>
+						<td align="right">20</td>
+						<td align="right">9.8</td>
+						</tr>
+						<tr>
+						<td>9. CL and other class activities</td>
+						<td align="right">12</td>
+						<td align="right">5.9</td>
+						</tr>
+						<tr>
+						<td>10. PBL and other responses</td>
+						<td align="right">4</td>
+						<td align="right">2.0</td>
+						</tr>
+						<tr>
+						<td>11. CL and other responses</td>
+						<td align="right">5</td>
+						<td align="right">2.4</td>
+						</tr>
+						<tr>
+						<td>Total</td>
+						<td align="right">204</td>
+						<td align="right">100</td>
+						</tr>
+						</tbody></table>
+						<font color="#ffffcc">[*]Ito, H., & Takeuchi, S. (2022). The demise of active learning even before its implementation? Instructors’ understandings and application of this approach within Japanese higher education. Education Inquiry, 13(2), 185-204.</font></small>
+					</section>
+
+					
+					<section data-background-color= "#181a18">
+						<font color="#ffffcc"> Active learning in the first year experience (FYE) in Japanese universities and colleges [*]: </font>
+						<p class="fragment"><i class="fas fa-kiwi-bird"></i> discussion</p>
+						<p class="fragment"><i class="fas fa-kiwi-bird"></i> writing</p>
+						<p class="fragment"><i class="fas fa-kiwi-bird"></i> collaborative learning</p>
+						<p class="fragment"><i class="fas fa-kiwi-bird"></i> debate </p>
+						<p class="fragment"><i class="fas fa-kiwi-bird"></i> Peer teaching </p>
+						<p></p>
+						<small><font color="#ffffcc">[*] Yamada, A., & Yamada, R. (2018). The new movement of active learning in Japanese higher education: the analysis of active learning case in Japanese graduate programs. Active Learning-Beyond the Future, 1(4), 1-16.</font></small>
+						</section>
+
+						
+
+						<section data-background="#FFFFFF" style ="text-align:left; color:#181a18">
+							Frequency of various activities in FYE (2010, 4 Universities)
+							<hr>
+							<img src="https://api.intechopen.com/media/chapter/63363/media/F1.png" width = 80%>
+							<small><font color="#181a18">Yamada, A., & Yamada, R. (2018). The new movement of active learning in Japanese higher education: the analysis of active learning case in Japanese graduate programs. Active Learning-Beyond the Future, 1(4), 1-16.</font></small>
+						</section>
+
+
+						<section data-background-color= "#181a18" style ="text-align:left;">
+							<font color="#ffffcc"> Active Learning at the Faculty of Mathematics and Natural sciences, UiO: </font>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> The Learning Assistant (LA) program at UiO [*]</p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> A pedagogic support unit (KURT) </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Centre for Computing in Science Education </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> B-tjenesten (student tutoring service) </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Interactive computational projects (spinoff from the Hylleraas centre for quantum molecular sciences) </p>
+							<p></p>
+							<small><font color="#ffffcc">[*] Odden, T. O., Lauvland, A., Bøe, M. V., & Henriksen, E. K. (2023). Implementing the Learning Assistant Model in European higher education. European Journal of Physics.</font></small>
+						</section>
+
+						<section data-background-color= "#181a18" style ="text-align:left;">
+							<font color="#ffffcc"> The LA program in brief</font>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> A way of realizing active learning [*]</p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Undergraduates as tutors </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Weekly meetings with teaching staff </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Practice above theory </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> ...but still some theory. </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Course transformation  </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Evidence-based teaching methods </p>
+							<p></p>
+							<small><font color="#ffffcc">[*] Otero, V., Pollock, S., & Finkelstein, N. (2010). A physics department’s role in preparing physics teachers: The Colorado learning assistant model. American Journal of Physics, 78(11), 1218-1224.</font></small>
+						</section>
+
+
+
+						<section data-background-color= "#181a18" style ="text-align:left;">
+							<center>
+							<img src="visuals/la_structure.png" width = 40%>
+							<p>
+							</p>
+							<p>The Learning Assistant program</p>
+						</center>
+						</section>
+
+						
+
+						
+
+						<section data-background-image="visuals/graded_background_1176.png" style ="text-align:left; color:#f4dca5">
+							Content in the LA-program
+							<small>
+								<table>
+									<tr>
+										<th style="font-size:  smaller">
+											<p>Week</p>
+										</th>
+										<th style="font-size:  smaller">
+											<p>Topic</p>
+										</th>
+										<th style="font-size:  smaller">
+											&nbsp;
+										</th>
+										<th style="font-size:  smaller;">
+											<p>Literature</p>
+										</th>
+									</tr>
+									<tr>
+										<th style="font-size:  smaller">
+											1
+										</th>
+										<th style="font-size:  smaller">
+											Communcation and activity
+										</th>
+										<th style="font-size:  smaller">
+											&nbsp;
+										</th>
+										<th style="font-size:  smaller;">
+											 Lang, J. M. (2016). Small changes in teaching: The first/last 5 minutes of class. The chronicle of higher education. 				
+										</th>
+									</tr>
+
+									<tr>
+										<th style="font-size:  smaller">
+											2
+										</th>
+										<th style="font-size:  smaller">
+											Open and closed questions
+										</th>
+										<th style="font-size:  smaller">
+											&nbsp;
+										</th>
+										<th style="font-size:  smaller;">
+											Blosser, P. E. (1991). How to ask the right questions. NSTA Press. 			
+										</th>
+									</tr>
+
+									<tr>
+										<th style="font-size:  smaller">
+											 3
+										</th>
+										<th style="font-size:  smaller">
+											Sensemaking vs. answermaking
+										</th>
+										<th style="font-size:  smaller">
+											&nbsp;
+										</th>
+										<th style="font-size:  smaller;">
+											Megowan-Romanowicz, C. (2016). Whiteboarding: A tool for moving classroom discourse from answer-making to sense-making. The Physics Teacher, 54(2), 83-86.					
+										</th>
+									</tr>
+
+									<tr>
+										<th style="font-size:  smaller">
+											4
+										</th>
+										<th style="font-size:  smaller">
+											Microlectures
+										</th>
+										<th style="font-size:  smaller">
+											&nbsp;
+										</th>
+										<th style="font-size:  smaller;">				
+										</th>
+									</tr>
+
+									<tr>
+										<th style="font-size:  smaller">
+											5
+										</th>
+										<th style="font-size:  smaller">
+											Inclusive teaching 
+										</th>
+										<th style="font-size:  smaller">
+											&nbsp;
+										</th>
+										<th style="font-size:  smaller;">
+											Tanner, K. D. (2013). Structure matters: twenty-one teaching strategies to promote student engagement and cultivate classroom equity. CBE—Life Sciences Education, 12(3), 322-331.					
+										</th>
+									</tr>
+
+									<tr>
+										<th style="font-size:  smaller">
+											6
+										</th>
+										<th style="font-size:  smaller">
+											Observation
+										</th>
+										<th style="font-size:  smaller">
+											&nbsp;
+										</th>
+										<th style="font-size:  smaller;">				
+										</th>
+									</tr>
+								</table>
+								</small>
+						</section>
+
+						<section data-background-color= "#181a18" style ="text-align:left;">
+							<font color="#ffffcc"> A typical LA-session: </font>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Debrief</p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Intro</p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Warm-up</p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Theory </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Task </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Share-out </p>
+							<p class="fragment"><i class="fas fa-kiwi-bird"></i> Summarize </p>
+							<p></p>
+						</section>
+						
+
+						<section data-background-color= "#181a18" style ="text-align:left; color:#f1d38d">
+							<p> Effects of the LA-program  </p>
+							   <blockquote style="color:#fcf2d9">
+								<small>
+								"A thematic analysis of these data showed that participation in the LA model helped ensure LA buy-in to both the interactive engagement methods and goal of cultivating conceptual understanding that underlie most research-based instructional strategies (...)""
+							</small>   
+							</blockquote>
+							   <small><font color="#ffffcc">[*] Odden, T. O., Lauvland, A., Bøe, M. V., & Henriksen, E. K. (2023). Implementing the Learning Assistant Model in European higher education. European Journal of Physics.</font></small>
+						</section>
+
+						<section data-background-iframe="https://www.mn.uio.no/kurt/" data-background-interactive>	
+							<div style="position: absolute; width: 70%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+								KURT: A pedagogical support centre for science education
+							</div>
+						</section>
+
+
+						<section data-background-iframe="https://www.mn.uio.no/ccse/english/" data-background-interactive>	
+							<div style="position: absolute; width: 70%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+								The Centre for Computing in Science Education
+							</div>
+						</section>
+
+						<section data-background-iframe="https://www.mn.uio.no/kjemi/english/about/news-and-events/news/2023/pushing-the-limits-of-chemistry-education.html" data-background-interactive>	
+							<div style="position: absolute; width: 70%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+								The Open World Learning framework (summer internships)
+							</div>
+						</section>
+
+						<section data-background="#ddbb99">
+							<font color="#111122">Open World Learning</font>
+								<img src="https://openworldlearning.github.io/_static/owl_logo.png" width = "5%" >
+							<div align = 'center'>
+								<img src="https://audunsh.github.io/slides/assets/owl_infobox_1.png" width = '20%' align = 'center'>
+								<img src="https://audunsh.github.io/slides/assets/owl_infobox_2.png" width = '20%' align = 'center'>
+								<img src="https://audunsh.github.io/slides/assets/owl_infobox_4.png" width = '20%' align = 'center'>
+								<img src="https://audunsh.github.io/slides/assets/owl_infobox_3.png" width = '20%' align = 'center'>
+								<center><small>graph based learning paths, student-driven content generation, personalized and AI-driven assessment, and embedded code and simulations promoting computational thinking.</small></center>
+								</div> 
+							</section>
+
+
+						<section data-background-iframe="https://unioslo-mn.github.io/btjenesten/" data-background-interactive>	
+							<div style="position: absolute; width: 70%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+								B-tjenesten
+							</div>
+						</section>
+
+						<section data-background-image="visuals/b-tjenesten-motor-4.png" data-background-opacity = 1.0 data-background-size="50%">
+						</section>
+
+						<section data-background="#ffcc88">
+							<div align = 'center'>
+								<a href="https://audunsh.github.io/braketlab/"><img src="https://audunsh.github.io/slides/assets/braketlab_logo_plain.png" width = '20%' align = 'center'></a>
+								<a href="https://github.com/audunsh/evince"><img src="https://audunsh.github.io/slides/assets/evince_logo.png" width = '20%' align = 'center'></a>
+								<a href="https://audunsh.github.io/btjenesten/"><img src="https://raw.githubusercontent.com/audunsh/btjenesten/master/graphics/b_logo_3.png" width = '20%' align = 'center'></a>
+								<a href="https://github.com/audunsh/bubblebox"><img src="https://audunsh.github.io/slides/assets/bubblebox_logo15.png" width = '20%' align = 'center'></a>
+								<center><small>Tools for exploration</small></center>
+						   </section>
+
+						   <section data-background-video="visuals/bubblebox2.mov" data-background-video-loop="true">
+							<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<span style="color: #c5ad73">&nbsp; Asymmetric forces for lifelike molecular dynamics &nbsp;</span>
+							<img src="visuals/bubblebox_logo.png" width = "5%" >
+					   </section>
+
+					   <section data-background-image="visuals/venn_nj.png" data-background-opacity = 1.0 data-background-size="50%">
+					</section>
+
+
+					   <section data-background-image="visuals/active_learning.png" data-background-opacity = 1.0 data-background-size="150%" data-transition="fade">
+						<img data-src="visuals/uio_logo2_white.svg" height = '80px' align = 'right'>
+						<img data-src="visuals/hylleraas-–-logo-–-white-– screen-–-rgb.png" height = '60px' align = 'right'>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<h2> <font color="#c5ad73">The rise of</font> <font color="#c5ad73">  </font> </h2 align = "bottom">
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p></p>
+						<h3><font color="#c5ad73">approaches</font> <font color="#BBBBBB">across cultures</font></h3 align = "bottom">
+							<small>
+								<span style="background-color: #c5ad73">&nbsp; Presentation contained works by Audun Skau Hansen, Tor Ole Odden, Andreas Haraldsrud, Tone Gregers, Steven Wilson, Christine Olsen, Jonathan Smith, Simen Reine (and the HSP team), Michele Cascella, Elias Dalan, Ayla Coder, Hanan Gharayba and many others. &nbsp;</span>
+							</small>
+						<p>&nbsp;</p>
+						
+						<p></p>
+					</section>
+
+
+
+
+
+
+
+
+                
+				
+
+
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes,RevealMath.KaTeX  ]
+			});
+		</script>
+	</body>
+</html>

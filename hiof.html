@@ -363,6 +363,56 @@
                 </font>
             </section>
 
+            <section data-background-color="#FFFFE6">
+                <img src="visuals/paradigm.png" width="80%"">
+                <p></p>
+                <font color=" #262a24">Maskinlæring - et programmeringsparadigme</font>
+                <small>
+                    <font color="#262a24">Chollet, F. (2021). Deep learning with Python. Simon and Schuster.</font>
+                </small>
+            </section>
+
+            <section data-background-color="#FFFFE6">
+                <section><img src="visuals/regression_model_6.png" width="80%""></section>
+            
+                <section data-background=" #FFFFE6" style="text-align:left;">
+                    Maskinlæring har ulike bruksområder:
+                    <hr>
+                    <p class="fragment"><i class="fas fa-kiwi-bird"></i> Klassifikasjon og kategorisering</p>
+                    <p class="fragment"><i class="fas fa-kiwi-bird"></i> Regresjon</p>
+                    <p class="fragment"><i class="fas fa-kiwi-bird"></i> Gruppering ("clustering") </p>
+                </section>
+
+                <section>
+                    <h3>Maskinlæring i et nøtteskall</h3>
+                    <hr>
+                    La parameterne $\{\alpha\}$ forme en modell $f$, slik at
+                    \[
+                    f(\{\alpha\}, \mathbf{x}_i) = \tilde{\mathbf{y}}_i
+                    \]
+                    tilordner et datasett $\mathbf{x}_i$ til et resultat $\tilde{\mathbf{y}}_i$.
+                </section>
+
+                <section>
+
+                    Om vi kjenner det egentlige utfallet $\mathbf{x}_i \rightarrow \mathbf{y}_i$, kan vi velge
+                    $\{\alpha\}$ slik at vi minimerer
+                    \[
+                    \mathcal{C}(\{\alpha\}, \Omega) = \sum_{i \in \Omega} (f(\{\alpha\}, \mathbf{x}_i) - \mathbf{y}_i)^2
+                    \].
+                </section>
+
+
+
+                <section>
+                    Dette kan gjøres ved å følge gradienten til $\mathcal{C}(\{\alpha\})$ iterativt med en steglengde
+                    $\eta$:
+                    \[
+                    \alpha_{i, n+1} = \alpha_{i, n} - \eta \frac{\partial}{\partial \alpha_i} \mathcal{C}(\{\alpha\})
+                    \]
+                </section>
+            </section>
+
 
             <section data-background-color="#181a18" data-transition="fade">
                 <img src="graphics/text_predict_1.svg">
@@ -839,8 +889,9 @@
             </section>
 
 
-            <section data-background-iframe="https://www.youtube.com/watch?v=MlyoObdIHyo&ab_channel=PromptEngineering"
-                data-background-video-loop data-background-video-muted>
+
+            <section data-background-iframe="https://www.youtube.com/embed/MlyoObdIHyo" data-background-video-loop
+                data-background-video-muted>
             </section>
 
             <section data-background-color="#181a18" style="text-align:left; color:#f6f6a0">
